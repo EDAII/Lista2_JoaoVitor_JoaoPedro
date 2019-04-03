@@ -1,6 +1,8 @@
 from insertion_sort import insertion_sort
 from bubble_sort import bubble_sort
 from selection_sort import selection_sort
+from shell_sort import shell_sort
+from gera_relatorio import gera_csv, plot_grafico
 import time
 import random
 import utils
@@ -29,9 +31,11 @@ if __name__ == '__main__':
     tempo_ordenacao = {'insertion_sort': {100: 0, 200: 0,
                   300: 0, 400: 0, 500: 0, 600: 0,
                   700: 0, 800: 0, 900: 0, 1000: 0},
-                  'selection_sort':{}, 'bubble_sort': {} }
+                  'selection_sort':{}, 'bubble_sort': {},
+                  'shell_sort': {} }
     tempo_ordenacao['selection_sort'].update(tempo_ordenacao['insertion_sort'])
     tempo_ordenacao['bubble_sort'].update(tempo_ordenacao['insertion_sort'])
+    tempo_ordenacao['shell_sort'].update(tempo_ordenacao['insertion_sort'])
     tamanho_vetor = 100
     lista = random.sample(range(0,tamanho_vetor * 2), tamanho_vetor)
 
@@ -43,6 +47,7 @@ if __name__ == '__main__':
             seleciona_algoritmo(insertion_sort, lista, tempo_ordenacao, 'insertion_sort')
             seleciona_algoritmo(bubble_sort, lista, tempo_ordenacao, 'bubble_sort')
             seleciona_algoritmo(selection_sort, lista, tempo_ordenacao, 'selection_sort')
+            seleciona_algoritmo(shell_sort, lista, tempo_ordenacao, 'shell_sort')
         elif choice=='2':
             print("Opcao 2 foi escolhida")
             # busca_media.main()
@@ -56,3 +61,6 @@ if __name__ == '__main__':
         else:
             input("Opcao incorreta. Aperte qualquer tecla para tentar novamente..")
     print(tempo_ordenacao)
+    gera_csv(tempo_ordenacao)
+    plot_grafico(tempo_ordenacao)
+

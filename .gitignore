@@ -29,3 +29,6 @@ venv.bak/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# relatório gerado pelo programa main.py
+relatorio.csv
