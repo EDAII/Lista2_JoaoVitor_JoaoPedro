@@ -30,5 +30,7 @@ venv.bak/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# relatório gerado pelo programa main.py
-relatorio.csv
+#arquivo gerado ao compilar arquivo .c
+a.out
+#resultados ao realizar a execucao dos algoritmos em c
+*.csv

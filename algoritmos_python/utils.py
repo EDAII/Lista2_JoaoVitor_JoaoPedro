@@ -1,4 +1,5 @@
 import random
+import pandas as pd
 
 def insere_randomico(lista, qtd_insercao):
     """
@@ -9,3 +10,4 @@ def insere_randomico(lista, qtd_insercao):
         lista.append(random.randint(1,qtd_insercao))
     random.shuffle(lista)
     return lista
+    
