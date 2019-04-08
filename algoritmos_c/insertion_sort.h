@@ -2,9 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertion_sort(int vetor[], int tamanhoVetor) {
-    int escolhido, j;
-    for (int i = 1; i < tamanhoVetor; i++) {
+void insertion_sort(int vetor[], int tam_vetor) {
+    /*
+    Realiza ordenacao utilizando bubble sort
+    vetor: Vetor de inteiros
+    tam_vetor: Inteiro com tamanho do vetor
+    */
+    int escolhido, i, j;
+    for (i = 1; i < tam_vetor; i++) {
         escolhido = vetor[i];
         j = i - 1;
         

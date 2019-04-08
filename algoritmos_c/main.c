@@ -11,12 +11,12 @@ int main(){
     FILE *fp;    
     fp = fopen ("../csv_base_c.csv","w");
     int i, j;
-    for(j = 100; j <= 1000; j+=100){
+    for(j=1000; j<=10000; j+=1000){
         srand(time(NULL));
         int vetor[j];
-        int size = sizeof(vetor) / sizeof(vetor[0]); // pegando tamanho do array
-        for(i = 0; i < size; i++){
-            vetor[i] = rand() % j + 1; // gera nums aleatórios de 1 a 100
+        int tam_vetor = sizeof(vetor) / sizeof(vetor[0]); // pegando tamanho do array
+        for(i = 0; i < tam_vetor; i++){
+            vetor[i] = rand() % j + 1; // gera nums aleatórios de 1 a 10000
         }
         clock_t t;
         t = clock(); 
@@ -38,7 +38,7 @@ int main(){
         shell_sort(vetor, j);
         t = clock() - t; 
         double tempo_shell_sort = ((double)t)/CLOCKS_PER_SEC; // in seconds  
-        fprintf(fp, "\"shell_sort\",%d,%f\n", j, tempo_shell_sort);
+        fprintf(fp, "\"shell_sort\",%d,%f\n", j, tempo_shell_sort);        
     }
     return 0; 
 }

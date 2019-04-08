@@ -1,9 +1,13 @@
-def selection_sort(array):
-    for index in range(0, len(array)):
+def selection_sort(lista):
+    """
+    Realiza ordenacao utilizando selection sort
+    lista: Vetor de inteiros
+    """
+    for index in range(0, len(lista)):
         min_index = index
 
-        for right in range(index + 1, len(array)):
-            if array[right] < array[min_index]:
+        for right in range(index + 1, len(lista)):
+            if lista[right] < lista[min_index]:
                 min_index = right
 
-        array[index], array[min_index] = array[min_index], array[index]
+        lista[index], lista[min_index] = lista[min_index], lista[index]

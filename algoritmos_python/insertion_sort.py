@@ -1,6 +1,8 @@
-# Function to do insertion sort
-def insertion_sort(lista):  
-    # Traverse through 1 to len(lista) 
+def insertion_sort(lista):
+    """
+    Realiza ordenacao utilizando insertion sort
+    lista: Vetor de inteiros
+    """
     for i in range(1, len(lista)):
         key = lista[i]
         j = i-1
