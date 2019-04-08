@@ -46,6 +46,6 @@ Caso ocorra algum erro de execução nas funções relacionadas aos algoritmos e
 
     $ chmod +x executa_prog.sh
 
-**Observação: Durante a execuçaão do programa um arquivo csv com o nome "csv_base_c.csv" será gerado para posterior geração de gráficos e csv's**
+**Observação: Durante a execução do programa um arquivo csv com o nome "csv_base_c.csv" será gerado para posterior geração de gráficos e csv's**
 
  
